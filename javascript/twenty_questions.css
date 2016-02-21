@@ -1,0 +1,16 @@
+.grc-grade-calculator {
+    border-style: solid;
+    border-width: 1px;
+    width: 450px;
+    height: 275px;
+}
+body {
+    color: #555555;
+    font-family: "open sans", arial, sans-serif;
+}
+h3, .omg {
+    font-size: 21px;
+    font-weight: 400;
+    margin: 24px 0 14px 0;
+}
+
