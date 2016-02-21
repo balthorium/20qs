@@ -2,36 +2,43 @@
 <html>
 
 <head>
-<link rel="stylesheet" type="text/css" href="twenty_questions.css">
-<script src="twenty_questions.js"></script>
+    <script src="twenty_questions.js"></script>
 </head>
 
-<body>
+<body onload="initialize()">
 
-<div class="twenty_questions_interface" align="center">
-    <h3>Twenty Questions</h3>
-    <hr/>
+<h3>Twenty Questions</h3>
+
+<hr/>
+
+<div id="question">?</div>
+
+<hr/>
+
+<div id="questionForm" hidden>
+<form>
+    <input type="button" value="Yes" onclick="currentQuestion.respondToYes();"/>
+    <input type="button" value="No" onclick="currentQuestion.respondToNo();"/>
+    <input type="button" value="restart" onclick="rootQuestion.ask();"/>
+</form>
+</div>
+
+<hr/>
+
+<div id="learnForm" hidden>
     <form>
-    <table id="twenty_questions_table">
-    <tr>
-        <td>
-            <div id="question">?</div>
-       </td>
-    </tr>
-    <tr>
-        <td>
-            <div>
-                <input type="button" value="Yes" onclick="processYes()"/>
-                <input type="button" value="No" onclick="processNo()"/>
-            </div>
-        </td>
-    </tr>
-    </table> 
+        <label for="learnThing">What were you thinking of? </label>
+        <input type="text" id="learnThing"/>
+        <br/>
+        <label for="learnQuestion">What question could be asked about it, for which the answer would be "yes"?</label>
+        <input type="text" id="learnQuestion"/>
+        <br/>
+        <input type="button" value="Learn!" onclick="currentQuestion.learn();"/>
     </form>
 </div>
 
-</body>
 
+</body>
 </html>
 
 
