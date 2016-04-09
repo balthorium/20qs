@@ -42,5 +42,5 @@ function initialize() {
     rootQuestion = new Question("Is it a monkey?", null, null);
     document.getElementById("questionForm").removeAttribute("hidden");
     rootQuestion.ask();
-};
+}
 
