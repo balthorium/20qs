@@ -18,10 +18,11 @@ function Question(qtext, answer) {
 Question.prototype.respondTo = function (answer) {
   var responseText;
   if (this.answer == answer) {
-      responseText = "correct!";
+      responseText = "You are very wise.";
   }
   else {
-      responseText = "wrong!";
+      responseText = "You are misguided.";
   }
   document.getElementById("response").innerHTML = responseText;
+  document.getElementById("questionForm").setAttribute("hidden", "true");
 };
