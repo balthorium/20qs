@@ -2,6 +2,12 @@
 var rootQuestion = null;
 var currentQuestion = null;
 
+function initialize() {
+    rootQuestion = new Question("Is it a monkey?", null, null);
+    document.getElementById("questionForm").removeAttribute("hidden");
+    rootQuestion.ask();
+}
+
 function Question(qtext, yes, no) {
     this.qtext = qtext;
     this.yes = yes;
@@ -37,10 +43,4 @@ Question.prototype.learn = function () {
     document.getElementById("learnForm").setAttribute("hidden", "true");
     rootQuestion.ask();
 };
-
-function initialize() {
-    rootQuestion = new Question("Is it a monkey?", null, null);
-    document.getElementById("questionForm").removeAttribute("hidden");
-    rootQuestion.ask();
-}
 

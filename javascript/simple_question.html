@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- header section -->
+<head>
+    <script src="simple_question.js"></script>
+</head>
+
+
+<!-- initialize the program by calling initialize when the page is loaded -->
+<body onload="initialize()">
+
+
+<!-- a division where the javascript will write response text -->
+<div id="response">?</div>
+
+
+<!-- an HTML form where the user will respond by clicking either "True" or "False" -->
+<div id="questionForm">
+    <form>
+        <input type="button" value="True" onclick="question.respondTo(true);"/>
+        <input type="button" value="False" onclick="question.respondTo(false);"/>
+    </form>
+</div>
+
+
+</body>
+</html>
