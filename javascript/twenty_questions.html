@@ -15,17 +15,20 @@
 
 <hr/>
 
-<div id="questionForm" hidden>
+<div id="yesOrNo" hidden>
 <form>
     <input type="button" value="Yes" onclick="currentQuestion.respondToYes();"/>
     <input type="button" value="No" onclick="currentQuestion.respondToNo();"/>
-    <input type="button" value="restart" onclick="rootQuestion.ask();"/>
 </form>
 </div>
 
-<hr/>
+<div id="playAgain" hidden>
+<form>
+    <input type="button" value="play again" onclick="rootQuestion.play();"/>
+</form>
+</div>
 
-<div id="learnForm" hidden>
+<div id="learn" hidden>
     <form>
         <label for="learnThing">What were you thinking of? </label>
         <input type="text" id="learnThing"/>
@@ -33,10 +36,10 @@
         <label for="learnQuestion">What question could be asked about it, for which the answer would be "yes"?</label>
         <input type="text" id="learnQuestion"/>
         <br/>
-        <input type="button" value="Learn!" onclick="currentQuestion.learn();"/>
+        <hr/>
+        <input type="button" value="Learn and play again" onclick="currentQuestion.learn();"/>
     </form>
 </div>
-
 
 </body>
 </html>
